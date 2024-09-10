@@ -15,17 +15,19 @@ output_file=$3
 header_file="${specifier}_header.html"
 footer_file="${specifier}_footer.html"
 
-# Check if the required files exist
+# If the contents file does not exist, print an error message and exit
 if [ ! -f "$contents_file" ]; then
   echo "Contents file '$contents_file' not found!"
   exit 1
 fi
 
+# If the header file does not exist, print an error message and exit
 if [ ! -f "$header_file" ]; then
   echo "Header file '$header_file' not found!"
   exit 1
 fi
 
+# If the footer file does not exist, print an error message and exit
 if [ ! -f "$footer_file" ]; then
   echo "Footer file '$footer_file' not found!"
   exit 1
